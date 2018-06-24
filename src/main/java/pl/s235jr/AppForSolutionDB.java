@@ -17,9 +17,9 @@ public class AppForSolutionDB {
 
             while (true) {
 
-                Solution.loadAll(connection);
+                //Solution.loadAll(connection);
                 Scanner scanner = new Scanner(System.in);
-                System.out.println("What you want to do: add/edit/delete user or quit");
+                System.out.println("What you want to do: add/edit/view/delete user or quit");
                 String userChoice = scanner.nextLine();
                 Solution solution = new Solution();
 
@@ -57,10 +57,17 @@ public class AppForSolutionDB {
                         solution.saveToDB(connection);
                         break;
 
-                    case "delete":
+                    case "view":
 
                         System.out.println("ID?");
                         int id = Integer.parseInt(scanner.nextLine());
+                        Solution.loadAllByUserId(connection, id);
+                        break;
+
+                    case "delete":
+
+                        System.out.println("ID?");
+                        id = Integer.parseInt(scanner.nextLine());
                         Solution.deleteByID(connection, id);
                         break;
 
