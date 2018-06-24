@@ -15,7 +15,7 @@ public class Group {
         this.name = name;
     }
 
-    private Group() {
+    public Group() {
     }
 
     public void setName(String name) {

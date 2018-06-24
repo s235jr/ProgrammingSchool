@@ -14,7 +14,7 @@ public class Solution {
     private int exercise_id;
     private int users_id;
 
-    private Solution() {
+    public Solution() {
     }
 
     public Solution(String created, String updated, String description, int exercise_id, int users_id) {
@@ -125,7 +125,6 @@ public class Solution {
             solution.description = rs.getString("description");
             solution.exercise_id = rs.getInt("exercise_id");
             solution.users_id = rs.getInt("user_id");
-            System.out.println(solution);
             return solution;
         } else {
             return null;
