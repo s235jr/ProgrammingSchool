@@ -59,7 +59,7 @@ public class Boot {
             //Solution.loadAllByExerciseId(connection, 1);
 
             //Solution.loadAll(connection);
-            User.loadAllByGrupId(connection, 1);
+            //User.loadAllByGrupId(connection, 1);
 
 
         } catch (SQLException e) {

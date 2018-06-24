@@ -12,7 +12,7 @@ public class User {
     private String email;
     private String password;
 
-    private User() {
+    public User() {
     }
 
     public User(String username, String email, String password) {

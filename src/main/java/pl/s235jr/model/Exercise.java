@@ -11,7 +11,7 @@ public class Exercise {
     private String title;
     private String description;
 
-    private Exercise() {
+    public Exercise() {
     }
 
     public Exercise(String title, String description) {
